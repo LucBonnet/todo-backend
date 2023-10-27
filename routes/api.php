@@ -3,8 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Login
-Route::post('login', \App\Http\Controllers\Auth\LoginController::class);
 
 Route::prefix('tasks')
     ->middleware('auth:sanctum')
