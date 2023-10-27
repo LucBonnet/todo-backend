@@ -18,4 +18,10 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::middleware('auth:sanctum')
+    ->get('tasks', [\App\Http\Controllers\TasksController::class, 'index']);
+
+Route::middleware('auth:sanctum')
+    ->post('tasks', [\App\Http\Controllers\TasksController::class, 'store']);
+
 require __DIR__ . '/auth.php';

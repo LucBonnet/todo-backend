@@ -41,6 +41,6 @@ class RegisteredUserController extends Controller
                 'email' => $user->email
             ],
             'access_token' => $user->createToken('api')->plainTextToken
-        ]);
+        ], 201);
     }
 }
